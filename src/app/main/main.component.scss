@@ -1,0 +1,26 @@
+@import '../../styles.scss';
+
+section {
+    background: $background-color;
+    height: 100vh;
+    position: relative;
+    @include center();
+}
+
+.part-line {
+    width: 3px;
+    height: 100vh;
+    background: $parting-color;
+    position: absolute;
+    left: 350px;
+}
+
+nav {
+    position: absolute;
+    left: 50px;
+}
+
+header {
+    position: absolute;
+    top: 0px;
+}
