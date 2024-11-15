@@ -1,0 +1,25 @@
+@import '../../../styles.scss';
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    height: 100vh;
+    @include center($jc : space-between);
+    flex-direction: column;
+    padding: 16px 0px;
+}
+
+.logo {
+    width: 110px;
+    height: 120px;
+}
+
+a {
+    text-decoration: none;
+    color: $text-color;
+}
+
+ul {
+    list-style-type: none;
+  }

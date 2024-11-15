@@ -1,0 +1,11 @@
+@import '../../../styles.scss';
+
+header {
+    position: absolute;
+    top: 0px;
+    left: 250px;
+    width: calc(100vw - 250px);
+    @include center($jc: space-between);
+    padding: 10px;
+    color: $text-color;
+}
