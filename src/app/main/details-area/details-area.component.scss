@@ -1,10 +1,11 @@
 @import '../../../styles.scss';
 
 section {
-    position: absolute;
-    bottom : 0;
-    left: 253px;
     height: calc(100vh - 100px);
     width: calc(100vw - 253px);
     background-color: $text-color;
+    overflow: hidden;
+    position: fixed;
+    left: 253px;
+    top: 100px;
 }
