@@ -3,11 +3,12 @@
 nav {
     position: absolute;
     top: 0;
-    left: 50px;
+    left: 0px;
     height: 100vh;
-    @include center($jc : space-between);
+    width: 250px;
+    @include center($jc : space-between, $ai: flex-start);
     flex-direction: column;
-    padding: 16px 0px;
+    padding: 16px 32px;
 }
 
 .logo {
