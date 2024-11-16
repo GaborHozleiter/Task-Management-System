@@ -1,0 +1,16 @@
+@import '../../../styles.scss';
+
+section {
+    width: 700px;
+    height: 400px;
+    background-color: $primary-color;
+    z-index: 2;
+    @include center($g: 8px);
+}
+
+.form-group {
+    display: flex;
+    justify-content: center;
+    color: $text-color;
+    gap: 8px;
+}
