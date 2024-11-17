@@ -10,7 +10,11 @@ section {
 
 .form-group {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     color: $text-color;
-    gap: 8px;
+    gap: 16px;
+}
+
+.submit-button {
+    margin-top: 32px;
 }
