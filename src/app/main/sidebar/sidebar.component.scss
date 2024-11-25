@@ -24,3 +24,16 @@ a {
 ul {
     list-style-type: none;
   }
+
+.menu {
+    width: 175px;
+    height: 32px;
+    margin-bottom: 16px;
+    @include center();
+    &:hover {
+        background-color: $text-color;
+        a {
+            color: #1c3739;
+        }
+    }
+}
