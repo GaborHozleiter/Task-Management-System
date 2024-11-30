@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
   styleUrl: './add-new-contact.component.scss'
 })
 export class AddNewContactComponent {
+  @Input()addContactWindowOpen! : boolean;
+  @Output()addContactWindowClose = new EventEmitter<boolean>();
 
   createForm: FormGroup;
 
@@ -27,6 +29,10 @@ export class AddNewContactComponent {
       const { username, email, phone } = this.createForm.value;
       console.log('Login data:', { username, email, phone });
     }
+  }
+
+  closeWindow(){
+    this.addContactWindowClose.emit();
   }
 
 }

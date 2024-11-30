@@ -1,7 +1,7 @@
 <section>
     <div class="contactlist">
         <div class="button-container">
-            <button>Add new contact<img src="#" alt="add-contact-button"></button>
+            <button (click)="addContact()">Add new contact<img src="#" alt="add-contact-button"></button>
         </div>
         <div class="contacts"></div>
     </div>
@@ -10,5 +10,7 @@
         <div class="parting-line"></div>
         <p>Better with a team</p>
     </div>
-    <app-add-new-contact class="add-new-contact-window"></app-add-new-contact>
+    <app-add-new-contact
+        [ngStyle]="addContactWindowOpen ? { 'left': 'calc(50% - 350px)' } : { 'left': 'calc(50% - 3500px)' }"
+        class="add-new-contact-window"></app-add-new-contact>
 </section>

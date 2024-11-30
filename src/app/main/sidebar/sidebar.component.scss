@@ -30,6 +30,7 @@ ul {
     height: 32px;
     margin-bottom: 16px;
     @include center();
+    cursor: pointer;
     &:hover {
         background-color: $text-color;
         a {
