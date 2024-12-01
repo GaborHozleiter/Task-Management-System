@@ -5,6 +5,7 @@ import { DetailsAreaComponent } from './main/details-area/details-area.component
 import { ContactsComponent } from './contacts/contacts.component';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { BoardComponent } from './board/board.component';
+import { GuideComponent } from './guide/guide.component';
 
 export const routes: Routes = [
     {
@@ -15,7 +16,8 @@ export const routes: Routes = [
           { path: 'imprint', component: ImprintComponent },
           { path: 'contacts', component: ContactsComponent },
           { path: 'add-task', component: AddTaskComponent },
-          { path: 'board', component: BoardComponent }
+          { path: 'board', component: BoardComponent },
+          { path: 'guide', component: GuideComponent }
         ]
       },
 ];

@@ -18,4 +18,25 @@ header {
     border-radius: 25px;
     @include center();
     cursor: pointer;
+    a {
+        color: $text-color;
+        text-decoration: none;
+    }
+}
+
+.user-circle {
+    width: 48px;
+    height: 48px;
+    border: 2px solid whitesmoke;
+    border-radius: 48px;
+    @include center();
+    cursor: pointer;
+    p {
+        font-size: 22px;
+    }
+
+}
+
+.info {
+    @include center($g: 8px);
 }
