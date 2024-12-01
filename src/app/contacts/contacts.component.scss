@@ -73,6 +73,9 @@ section {
         color: $secondary-color;
         font-size: 48px;
     }
+    h1 {
+        font-size: 32px;
+    }
 }
 
 .contact-details-header {
@@ -81,8 +84,14 @@ section {
     margin-bottom: 48px;
 }
 
-.contact-details-description {
+.contact-details-description-top {
     @include center($g: 32px);
+    margin-bottom: 32px;
+}
+
+.contact-details-description-bottom {
+    @include center($ai: flex-start);
+    flex-direction: column;
 }
 
 .parting-line {

@@ -22,7 +22,7 @@
             <div class="parting-line"></div>
             <p>Better with a team</p>
         </div>
-        <div class="contact-details-description">
+        <div class="contact-details-description-top">
             <div *ngIf="clickedContact?.monogram" class="monogram-container big">
                 <p>{{ clickedContact?.monogram }}</p>
             </div>
@@ -32,7 +32,7 @@
                 <button>Delete</button>
             </div>
         </div>
-        <div >
+        <div *ngIf="clickedContact?.name" class="contact-details-description-bottom">
             <h1>Contact Information</h1>
             <h1>Email</h1>
             <h1>{{ clickedContact?.email }}</h1>
