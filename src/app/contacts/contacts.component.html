@@ -3,12 +3,24 @@
         <div class="button-container">
             <button (click)="addContact()">Add new contact<img src="#" alt="add-contact-button"></button>
         </div>
-        <div class="contacts"></div>
+        <div class="contacts">
+            <div *ngFor="let contact of contactList let i = index" class="contact-container" (click)="openContact(i)">
+                <p>{{ contact.name }}</p>
+                <p>{{ contact.email }}</p>
+
+            </div>
+        </div>
     </div>
     <div class="contact-details">
         <p>Contacts</p>
         <div class="parting-line"></div>
         <p>Better with a team</p>
+        <div>
+            <h1>{{ clickedContact?.name }}</h1>
+            <h1>{{ clickedContact?.email }}</h1>
+            <h1>{{ clickedContact?.phone }}</h1>
+        </div>
+
     </div>
     <app-add-new-contact
         [ngStyle]="addContactWindowOpen ? { 'left': 'calc(50% - 350px)' } : { 'left': 'calc(50% - 3500px)' }"

@@ -10,6 +10,22 @@ section {
 .contactlist {
     height: 100%;
     width: 350px;
+    @include center($jc: flex-start);
+    flex-direction: column;
+    margin-top: 64px;
+    overflow-y: scroll;
+}
+
+.contact-container {
+    margin: 48px 0px;
+    width: 250px;
+    @include center();
+    flex-direction: column;
+    cursor: pointer;
+    &:hover {
+        background: $background-color;
+        color: $text-color;
+    }
 }
 
 .button-container {
@@ -28,10 +44,10 @@ section {
 }
 
 .contact-details {
-    display: flex;
+    @include center($jc: flex-start);
+    flex-direction: column;
     gap: 8px;
     padding-top: 96px;
-    justify-content: center;
     width: calc(100% - 350px);
     p {
         color: $secondary-color;

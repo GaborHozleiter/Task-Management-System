@@ -1,0 +1,23 @@
+@import '../../styles.scss';
+
+section {
+    color: $text-color;
+}
+
+h1 {
+    margin-bottom: 64px;
+    color: $secondary-color;
+}
+
+.toDo {
+    width: 200px;
+    height: 200px;
+    background: $secondary-color;
+    @include center($jc : space-between);
+    flex-direction: column;
+    margin: 32px;
+}
+
+.toDo-header {
+    @include center();
+}
