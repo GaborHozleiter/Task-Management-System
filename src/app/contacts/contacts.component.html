@@ -5,22 +5,40 @@
         </div>
         <div class="contacts">
             <div *ngFor="let contact of contactList let i = index" class="contact-container" (click)="openContact(i)">
-                <p>{{ contact.name }}</p>
-                <p>{{ contact.email }}</p>
+                <div class="monogram-container">
+                    {{ contact.monogram }}
+                </div>
+                <div>
+                    <p>{{ contact.name }}</p>
+                    <p>{{ contact.email }}</p>
+                </div>
 
             </div>
         </div>
     </div>
     <div class="contact-details">
-        <p>Contacts</p>
-        <div class="parting-line"></div>
-        <p>Better with a team</p>
-        <div>
-            <h1>{{ clickedContact?.name }}</h1>
+        <div class="contact-details-header">
+            <p>Contacts</p>
+            <div class="parting-line"></div>
+            <p>Better with a team</p>
+        </div>
+        <div class="contact-details-description">
+            <div *ngIf="clickedContact?.monogram" class="monogram-container big">
+                <p>{{ clickedContact?.monogram }}</p>
+            </div>
+            <div *ngIf="clickedContact?.name">
+                <h1>{{ clickedContact?.name }}</h1>
+                <button>Edit</button>
+                <button>Delete</button>
+            </div>
+        </div>
+        <div >
+            <h1>Contact Information</h1>
+            <h1>Email</h1>
             <h1>{{ clickedContact?.email }}</h1>
+            <h1>Phone</h1>
             <h1>{{ clickedContact?.phone }}</h1>
         </div>
-
     </div>
     <app-add-new-contact
         [ngStyle]="addContactWindowOpen ? { 'left': 'calc(50% - 350px)' } : { 'left': 'calc(50% - 3500px)' }"

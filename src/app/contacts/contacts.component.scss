@@ -19,12 +19,33 @@ section {
 .contact-container {
     margin: 48px 0px;
     width: 250px;
-    @include center();
-    flex-direction: column;
+    height: 80px;
+    @include center($g : 16px);
     cursor: pointer;
     &:hover {
         background: $background-color;
         color: $text-color;
+        .monogram-container {
+            background: $text-color;
+            color: #22484B;
+        }
+    }
+}
+
+.monogram-container {
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    background: $background-color;
+    @include center();
+}
+
+.big {
+    width: 120px !important;
+    height: 120px !important;
+    border-radius: 120px !important;
+    p {
+        font-size: 32px;
     }
 }
 
@@ -46,13 +67,22 @@ section {
 .contact-details {
     @include center($jc: flex-start);
     flex-direction: column;
-    gap: 8px;
     padding-top: 96px;
     width: calc(100% - 350px);
     p {
         color: $secondary-color;
         font-size: 48px;
     }
+}
+
+.contact-details-header {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 48px;
+}
+
+.contact-details-description {
+    @include center($g: 32px);
 }
 
 .parting-line {
